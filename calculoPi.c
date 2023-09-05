@@ -1,10 +1,17 @@
 #include <stdio.h>
+#include <locale.h>
+
+/* Alguns pontos do cálculo são confusos, por isso o Script tras
+ * alguns comentários, talvez, mais que o necessário.
+ */
 
 int main() {
+    setlocale(LC_ALL, "Portuguese");
+
     int termos;
-    double pi = 0; //Declaração do início da variável para precisão de cálculo. 
+    double pi = 0; //Declaração do início da variável para precisão de cálculo.
     int i;
-    
+
     printf("Escolha o número de termos para o cálculo de pi, quanto mais termos usados, mais próximo do número real de pi estará: ");
     scanf("%i", &termos);
 
@@ -17,7 +24,7 @@ int main() {
         }
     }
 
-    pi *= 4; // Multiplicar pelo fator 4 para obter π
+    pi *= 4; // Multiplicar pelo fator 4 para obter pi
 
     printf("Valor de pi calculado com %i termos: %.20lf\n", termos, pi);
 
